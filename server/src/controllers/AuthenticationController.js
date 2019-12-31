@@ -2,7 +2,6 @@ const {User} = require('../models')
 
 module.exports = {
   async register (req, res) {
-    console.log(req.body)
     try {
       const user = await User.create(req.body)
       res.send(user.toJSON())
