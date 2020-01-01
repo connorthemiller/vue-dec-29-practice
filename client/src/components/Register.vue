@@ -19,29 +19,29 @@
 </template>
 
 <script>
-import AuthenticationService from "@/services/AuthenticationService";
+import AuthenticationService from '@/services/AuthenticationService'
 export default {
-  data() {
+  data () {
     return {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       error: null
-    };
+    }
   },
   methods: {
-    async register() {
+    async register () {
       try {
         await AuthenticationService.register({
           email: this.email,
           password: this.password
-        });
-        this.error = null;
+        })
+        this.error = null
       } catch (error) {
-        this.error = error.response.data.error;
+        this.error = error.response.data.error
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>
