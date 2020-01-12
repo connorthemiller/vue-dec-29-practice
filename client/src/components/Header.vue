@@ -5,10 +5,10 @@
         StrainJournal
       </span>
     </v-toolbar-title>
-    <!-- TO DO: Implement Me -->
-    <!-- <v-toolbar-items>
-      <v-btn flat dark>Browse</v-btn>
-    </v-toolbar-items> -->
+    <v-toolbar-items>
+      <v-btn
+        flat dark @click="navigateTo({name: 'strains'})">Browse</v-btn>
+    </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn
